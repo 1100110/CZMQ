@@ -58,7 +58,7 @@ static if(ZMQ_VERSION_MAJOR == 2)
     void zsockopt_set_hwm (void* socket, int hwm);
     void zsockopt_set_swap (void* socket, int swap);
     void zsockopt_set_affinity (void* socket, int affinity);
-    void zsockopt_set_identity (void* socket, char* identity);
+    void zsockopt_set_identity (void* socket, in char* identity);
     void zsockopt_set_rate (void* socket, int rate);
     void zsockopt_set_recovery_ivl (void* socket, int recovery_ivl);
     void zsockopt_set_recovery_ivl_msec (void* socket, int recovery_ivl_msec);
@@ -69,8 +69,8 @@ static if(ZMQ_VERSION_MAJOR == 2)
     void zsockopt_set_reconnect_ivl (void* socket, int reconnect_ivl);
     void zsockopt_set_reconnect_ivl_max (void* socket, int reconnect_ivl_max);
     void zsockopt_set_backlog (void* socket, int backlog);
-    void zsockopt_set_subscribe (void* socket, char* subscribe);
-    void zsockopt_set_unsubscribe (void* socket, char* unsubscribe);
+    void zsockopt_set_subscribe (void* socket, in char* subscribe);
+    void zsockopt_set_unsubscribe (void* socket, in char* unsubscribe);
 }
 
 static if(ZMQ_VERSION_MAJOR == 3)
@@ -97,7 +97,7 @@ static if(ZMQ_VERSION_MAJOR == 3)
     void zsockopt_set_sndhwm (void* socket, int sndhwm);
     void zsockopt_set_rcvhwm (void* socket, int rcvhwm);
     void zsockopt_set_affinity (void* socket, int affinity);
-    void zsockopt_set_identity (void* socket, char * identity);
+    void zsockopt_set_identity (void* socket, in char* identity);
     void zsockopt_set_rate (void* socket, int rate);
     void zsockopt_set_recovery_ivl (void* socket, int recovery_ivl);
     void zsockopt_set_sndbuf (void* socket, int sndbuf);
@@ -107,8 +107,8 @@ static if(ZMQ_VERSION_MAJOR == 3)
     void zsockopt_set_reconnect_ivl_max (void* socket, int reconnect_ivl_max);
     void zsockopt_set_backlog (void* socket, int backlog);
     void zsockopt_set_maxmsgsize (void* socket, int maxmsgsize);
-    void zsockopt_set_subscribe (void* socket, char* subscribe);
-    void zsockopt_set_unsubscribe (void* socket, char* unsubscribe);
+    void zsockopt_set_subscribe (void* socket, in char* subscribe);
+    void zsockopt_set_unsubscribe (void* socket, in char* unsubscribe);
 
     ///  Emulation of widely-used 2.x socket options
     void zsockopt_set_hwm (void* socket, int hwm);
@@ -147,8 +147,8 @@ static if(ZMQ_VERSION_MAJOR == 4)
     void zsockopt_set_reconnect_ivl_max (void* socket, int reconnect_ivl_max);
     void zsockopt_set_backlog (void* socket, int backlog);
     void zsockopt_set_maxmsgsize (void* socket, int maxmsgsize);
-    void zsockopt_set_subscribe (void* socket, char* subscribe);
-    void zsockopt_set_unsubscribe(void* socket, char* unsubscribe);
+    void zsockopt_set_subscribe (void* socket, in char* subscribe);
+    void zsockopt_set_unsubscribe(void* socket, in char* unsubscribe);
 
     ///  Emulation of widely-used 2.x socket options
     void zsockopt_set_hwm (void* socket, int hwm);
