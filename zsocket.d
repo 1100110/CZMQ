@@ -52,11 +52,11 @@ void zsocket_destroy(zctx_t* self, void* socket);
 ///  and returns the actual port number used. Otherwise asserts that the
 ///  bind succeeded with the specified port number. Always returns the
 ///  port number if successful.
-int zsocket_bind(void* socket, const char* format, ...);
+int zsocket_bind(void* socket, in char* format, ...);
 
 ///  Connect a socket to a formatted endpoint
 ///  Returns 0 if OK, -1 if the endpoint was invalid.
-int zsocket_connect(void* socket, const char* format, ...);
+int zsocket_connect(void* socket, in char* format, ...);
 
 ///  Returns socket type as printable constant string
 char* zsocket_type_str(void* socket);
