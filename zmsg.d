@@ -66,19 +66,19 @@ int zmsg_add(zmsg_t* self, zframe_t* frame);
 
 ///  Push block of memory as new frame to front of message.  Returns
 ///  non-zero error code on failure
-int zmsg_pushmem(zmsg_t* self, const void* src, size_t size);
+int zmsg_pushmem(zmsg_t* self, in void* src, size_t size);
 
 ///  Push block of memory as new frame to end of message.  Returns
 ///  non-zero error code on failure
-int zmsg_addmem(zmsg_t* self, const void* src, size_t size);
+int zmsg_addmem(zmsg_t* self, in void* src, size_t size);
 
 ///  Push string as new frame to front of message.  Returns non-zero
 ///  error code on failure
-int zmsg_pushstr(zmsg_t* self, const char* format, ...);
+int zmsg_pushstr(zmsg_t* self, in char* format, ...);
 
 ///  Push string as new frame to end of message.  Returns non-zero
 ///  error code on failure
-int zmsg_addstr(zmsg_t* self, const char* format, ...);
+int zmsg_addstr(zmsg_t* self, in char* format, ...);
 
 ///  Pop frame off front of message, return as fresh string
 char* zmsg_popstr(zmsg_t* self);
@@ -109,6 +109,7 @@ int zmsg_save(zmsg_t* self, FILE* file);
 
 ///  Load/append an open file into message, create new message if
 ///  null message provided.
+//TODO this doens't match the description
 int zmsg_load(zmsg_t* self, FILE* file, zmsg_t** return_msg);
 
 ///  Encode message to a new buffer, return buffer size
