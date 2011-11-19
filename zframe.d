@@ -40,7 +40,7 @@ immutable enum
 }
 
 ///  Create a new frame with optional size, and optional data
-zframe_t* zframe_new(const void* data, size_t size);
+zframe_t* zframe_new(in void* data, size_t size);
 
 ///  Destroy a frame
 void zframe_destroy(zframe_t** self_p);
@@ -75,7 +75,7 @@ char* zframe_strdup(zframe_t* self);
 
 ///  Return TRUE if frame body is equal to string, excluding terminator
 ///Bool zframe_streq(zframe_t* self, char* string);
-bool zframe_streq(zframe_t* self, char* string);
+bool zframe_streq(zframe_t* self, in char* str);
 
 ///  Return frame 'more' property
 int zframe_more(zframe_t* self);
@@ -86,10 +86,10 @@ int zframe_more(zframe_t* self);
 bool zframe_eq(zframe_t* self, zframe_t* other);
 
 ///  Print contents of frame to stderr
-void zframe_print(zframe_t* self, char* prefix);
+void zframe_print(zframe_t* self, in char* prefix);
 
 ///  Set new contents for frame
-void zframe_reset(zframe_t* self, const void* data, size_t size);
+void zframe_reset(zframe_t* self, in void* data, size_t size);
 
 ///  Self test of this class
 ///int zframe_test(Bool verbose);
