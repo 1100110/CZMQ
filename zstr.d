@@ -37,13 +37,13 @@ char* zstr_recv(void* socket);
 char* zstr_recv_nowait(void* socket);
 
 ///  Send a string to a socket in 0MQ string format
-int zstr_send(void* socket, const char* str);
+int zstr_send(void* socket, in char* str);
 
 ///  Send a string to a socket in 0MQ string format, with MORE flag
-int zstr_sendm(void* socket, const char* str);
+int zstr_sendm(void* socket, in char* str);
 
 ///  Send a formatted string to a socket
-int zstr_sendf(void* socket, const char* format, ...);
+int zstr_sendf(void* socket, in char* format, ...);
 
 ///  Self test of this class
 int zstr_test(bool verbose);
