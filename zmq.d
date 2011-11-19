@@ -139,7 +139,7 @@ size_t zmq_msg_size(zmq_msg_t* msg);
 /******************************************************************************/
 
 /*  Socket types.                                                             */
-immutable enum soc_type
+immutable enum
 {
     ZMQ_PAIR        = 0,
     ZMQ_PUB         = 1,
@@ -159,7 +159,7 @@ immutable enum soc_type
 }
 
 /*  Socket options.                                                           */
-immutable enum soc_opt
+immutable enum
 {
     ZMQ_HWM             = 1,
     ZMQ_SWAP            = 3,
@@ -184,7 +184,7 @@ immutable enum soc_opt
 }
 
 /*  Send/recv options.                                                        */
-immutable enum send_recv_opt
+immutable enum
 {
     ZMQ_NOBLOCK = 1,
     ZMQ_SNDMORE = 2
@@ -203,7 +203,7 @@ int zmq_recv(void* s, zmq_msg_t* msg, int flags);
 /*  I/O multiplexing.                                                         */
 /******************************************************************************/
 
-immutable enum io_multiplexing
+immutable enum
 {
     ZMQ_POLLIN  = 1,
     ZMQ_POLLOUT = 2,
@@ -231,7 +231,7 @@ int zmq_poll(zmq_pollitem_t* items, int nitems, long timeout);
 /*  Built-in devices                                                */
 /******************************************************************************/
 
-immutable enum devices
+immutable enum
 {
     ZMQ_STREAMER     = 1,
     ZMQ_FORWARDER    = 2,
