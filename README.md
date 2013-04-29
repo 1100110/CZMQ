@@ -1,10 +1,10 @@
-CZMQ 
-=================================
+CZMQ  
+======================================
 D binding to the high-level C Library.
+--------------------------------------
 
-
-List of Modules and their function
-----------------------------------
+List of Modules and their functions.
+--------------------------------------
 
 czmq 		- high-level C binding for ØMQ
 zclock 		- millisecond clocks and delays
