@@ -1,3 +1,11 @@
+CZMQ 
+=================================
+D binding to the high-level C Library.
+
+
+List of Modules and their function
+----------------------------------
+
 czmq 		- high-level C binding for ØMQ
 zclock 		- millisecond clocks and delays
 zctx 		- working with 0MQ contexts
@@ -12,5 +20,3 @@ zsockopt 	- get/set 0MQ socket options
 zstr 		- sending and receiving strings
 zthread 	- working with system threads
 
-The examples are really just the official tests to ensure that everything
-is working properly.
